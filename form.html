@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <script>
+        function validateForm() {
+          let x = document.forms["myForm"]["fname"].value;
+          if (x == "") {
+            alert("First Name must be filled out");
+            return false;
+          }
+          let y = document.forms["myForm"]["lastname"].value;
+          if (y == "") {
+            alert("Last Name must be filled out");
+            return false;
+          }
+          let z = document.forms["myForm"]["email"].value;
+          if (z == "") {
+            alert("Email must be filled out");
+            return false;
+          }
+          let a = document.forms["myForm"]["password"].value;
+          if (a == "") {
+            alert("Password must be filled out");
+            return false;
+          }
+          let b = document.forms["myForm"]["confirm_password"].value;
+          if (b == "") {
+            alert("Conform Password must be filled out");
+            return false;
+          }
+          var phone_number = document.forms["myForm"]["phone_number"].value;
+         if(phone_number =="")  
+         alert("Phone number must be filled out");
+          return false;  
+          var myTextarea = document.forms["myForm"]["myTextarea"].value;
+         if(myTextarea =="")    
+          alert("Please Provide Details!");
+          return false;       
+       
+}      
+
+        
+        </script>
+</head>
+<body>
+    <style>
+    body{
+        background-color: lightblue;
+      }
+      .first_name{
+          margin-left: 30px;
+           margin-top: 20px;
+      } 
+.email{
+    
+    margin-top: 20px;
+    margin-left: 45px;
+}
+.pass{
+    margin-left: 37px;
+     margin-top: 20px;
+
+}
+.repass{
+    margin-left: 17px;
+    margin-top: 20px;
+}
+.num{
+    margin-left: 9px; 
+     margin-top: 20px;
+}
+.add{
+    margin-left: 48px;
+    padding: 0px 6px;
+    margin-top: 20px;
+}
+   
+.city{
+    margin-left: 75px;
+    padding: 0px 51px;
+    margin-top: 20px;
+}
+.sub{
+    margin-left: 149px;
+    margin-top: 33px
+}
+h1 {
+        color: white;
+        text-align: center;
+      }
+      
+      p {
+        font-family: verdana;
+        font-size: 20px;
+      }
+    </style>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    <center>
+        
+<table> 
+    <h1>Register Form</h1>
+<tr>
+ <td>   
+<label for="Name">First Name: </label>
+<input type="text" name="fname" id="first_name" class="first_name" placeholder="Enter the First Name">
+<!-- Name: <input type="text" name="fname"> -->
+</td>
+</tr>
+
+<tr>
+    <td>
+    <label for="LastName">Last Name: </label>
+    <input type="text" name="lastname" id="Last_name" class="first_name" placeholder="Enter the Last Name" >
+</td>    
+</tr>
+        <tr>
+            <td>
+        <label for="email">Email id: </label>
+        <input type="email" name="email" id="email" class="email" placeholder="Enter the Email id" >
+    </td>    
+    </tr><tr>
+        <td>
+            <label for="password">Password: </label>
+            <input type="password" name="password" class="pass"   id="password" placeholder="Enter the Password"  >
+        </td>   
+        </tr><tr>
+            <td>
+                <label for="confirm password">Re password:</label>
+                <input type="password" name="confirm_password" id="confirm_password" class="repass" placeholder="Enter the Confirm Password" >
+            </td>    
+            </tr><tr>
+                <td>
+                    <label for="phone number">Phone Number: </label>
+                    <input type="number" name="phone_number" id="phone_number" class="num" placeholder="Enter the Phone Number"  >
+                </td>   
+                </tr><tr>
+                    <td>
+                        <label for="Address">Address:</label>
+                        <textarea name="name" id="myTextarea" class="add" cols="20" rows="4" placeholder="Enter Your Address"  ></textarea>
+                    </td>
+                 </tr>  
+                 <tr>
+                  <td>                         
+                            Gender:
+                              <input type="radio" id="male" name="gender" style="margin-left: 40px;" value="male">
+                              <label for="male">Male</label>
+                              <input type="radio" id="female" name="gender" value="female">
+                              <label for="female">Female</label>
+                              <input type="radio" id="other" name="gender" value="other">
+                              <label for="other">Other</label>
+                        </td></tr>
+                         <tr><td>
+                             <label for="city"> City: </label>
+                             <select id="city"  class="city">
+                                 <option value="none">None</option>
+                                 <option value="Palani">Palani</option>
+                                 <option value="Covai">Covai</option>
+                                 <option value="Erode">Erode</option>
+                                 <option value="Salem">Salem</option>
+                                 <option value="Namakkal">Namakkal</option>
+                             </select>
+                            </td></tr> 
+                            <br>
+                            <br>
+                         <tr><td>
+                            <input type="submit" class="sub" value="Submit">
+                            </td></tr>
+</table>
+</center>
+</form>
+
+</body>
+
+
+</html>
